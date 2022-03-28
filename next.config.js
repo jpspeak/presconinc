@@ -21,7 +21,7 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ['localhost']
+    domains: ['umbra-digital.sgp1.digitaloceanspaces.com']
   }
 }
 

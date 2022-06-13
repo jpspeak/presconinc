@@ -40,8 +40,7 @@ const contactInfoItems = [
   {
     title: 'For Our Services',
     trunkline: '(+632) 8531 4971 loc 820',
-    email: 'sales.post@presconinc.com',
-    fbPage: 'facebook.com/presconphil'
+    email: 'sales.post@presconinc.com'
   },
   {
     title: 'For Properties',

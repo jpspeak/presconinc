@@ -21,11 +21,11 @@ const navItems = [
   },
   {
     label: 'Projects',
-    href: '/projects/post-tensioning'
+    href: '/projects'
   },
   {
     label: 'Properties',
-    href: '/properties/residential'
+    href: '/properties'
   },
   {
     label: 'Safety',

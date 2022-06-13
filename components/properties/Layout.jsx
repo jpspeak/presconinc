@@ -1,24 +1,13 @@
-import { Box, Container, Link, Text } from '@chakra-ui/react'
+import { Container, Link, Text } from '@chakra-ui/react'
 
 import PropTypes from 'prop-types'
 
 import Head from 'next/head'
 
 import PageBanner from '../PageBanner'
-import Nav from '../Nav'
 
 import useAOS from '../../hooks/useAOS'
-
-const navItems = [
-  {
-    href: '/properties/residential',
-    label: 'RESIDENTIAL'
-  },
-  {
-    href: '/properties/commercial',
-    label: 'COMMERCIAL'
-  }
-]
+import FilterNav from '../FilterNav'
 
 export default function Layout({ children }) {
   useAOS()
@@ -50,11 +39,14 @@ export default function Layout({ children }) {
           condominium buildings which provide next-generation units, complemented by functional
           amenities and green open spaces, that will give you a healthy and vibrant experience.
         </Text>
-
-        <Box mt={8}>
-          <Nav navItems={navItems} />
-        </Box>
+        <FilterNav
+          filterName="category"
+          filters={['Residential', 'Commercial']}
+          borderBottom="1px"
+          borderColor="gray.200"
+        />
         {children}
+
         <Text my={8}>
           For more information regarding our properties for lease, please visit our Facebook
           Page:&nbsp;

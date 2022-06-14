@@ -43,7 +43,7 @@ CarouselItem.propTypes = {
   subtitle: PropTypes.string.isRequired
 }
 
-export default function Carousel({ carouselItems }) {
+export default function Carousel({ carouselItems = [] }) {
   return (
     <ResposiveCarousel
       verticalSwipe={false}
@@ -65,5 +65,5 @@ export default function Carousel({ carouselItems }) {
 }
 
 Carousel.propTypes = {
-  carouselItems: PropTypes.array.isRequired
+  carouselItems: PropTypes.array
 }

@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 import Carousel from '../components/home/Carousel'
 
-export default function Home({ carouselItems }) {
+export default function Home({ carouselItems = [] }) {
   const carouselItemsModified = carouselItems?.map(({ image, title, subtitle }) => ({
     image: `${process.env.NEXT_PUBLIC_STORAGE_URL}/home-carousel-items/${image}`,
     title,
@@ -30,7 +30,7 @@ export default function Home({ carouselItems }) {
 }
 
 Home.propTypes = {
-  carouselItems: PropTypes.array.isRequired
+  carouselItems: PropTypes.array
 }
 
 export async function getStaticProps() {
